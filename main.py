@@ -9,7 +9,6 @@ from wordcloud import WordCloud
 from sklearn.preprocessing import StandardScaler
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
-from xgboost import XGBClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import RandomizedSearchCV
 from sklearn.metrics import accuracy_score, plot_confusion_matrix
@@ -186,7 +185,6 @@ def models_score(models, X_train, X_test, y_train, y_test):
     
 models = {"DecisionTree":DecisionTreeClassifier(),
          "RandomForest":RandomForestClassifier(),
-         "XgBoost": XGBClassifier(),
          "KNeighborsClassifier":KNeighborsClassifier()}
          
  model_scores = models_score(models, X_train, X_test, y_train, y_test)
